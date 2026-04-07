@@ -4,14 +4,7 @@
 
 
 [build.environment]
-  CI = "false"
-  GENERATE_SOURCEMAP = "false"
    NODE_VERSION = "18"
   NPM_VERSION = "9"
 
-# SPA fallback — all routes serve index.html
-[[redirects]]
-  from   = "/*"
-  to     = "/index.html"
-  status = 200
 
