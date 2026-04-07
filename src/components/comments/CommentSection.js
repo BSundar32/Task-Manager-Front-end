@@ -159,7 +159,7 @@ const CommentSection = ({ taskId }) => {
   };
 
   const handleDelete = async (commentId) => {
-    if (!confirm('Delete this comment?')) return;
+    if (!window.confirm('Delete this comment?')) return;
     try {
       await commentsAPI.delete(commentId);
       setComments((prev) =>

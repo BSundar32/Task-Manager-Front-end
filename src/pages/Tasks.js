@@ -53,7 +53,7 @@ const Tasks = () => {
   };
 
   const handleDelete = async (id) => {
-    if (!confirm('Delete this task? This cannot be undone.')) return;
+    if (!window.confirm('Delete this task? This cannot be undone.')) return;
     await deleteTask(id);
   };
 

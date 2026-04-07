@@ -63,7 +63,7 @@ const TaskDetail = () => {
   };
 
   const handleDelete = async () => {
-    if (!confirm('Delete this task? This cannot be undone.')) return;
+    if (!window.confirm('Delete this task? This cannot be undone.')) return;
     await deleteTask(id);
     navigate('/tasks');
   };
@@ -93,7 +93,7 @@ const TaskDetail = () => {
   };
 
   const handleDeleteAttachment = async (attachmentId) => {
-    if (!confirm('Remove this attachment?')) return;
+    if (!window.confirm('Remove this attachment?')) return;
     await tasksAPI.deleteAttachment(id, attachmentId);
     setTask((prev) => ({ ...prev, attachments: prev.attachments.filter((a) => a._id !== attachmentId) }));
     toast.success('Attachment removed');
